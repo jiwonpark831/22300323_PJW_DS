@@ -24,4 +24,4 @@ ds005.cpp 결과<br>
 
 ds006.cpp 결과<br>
 
-<img src='https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab5/results/ds006.png' height = 150>
+<img src='https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab5/results/ds006.png' height = 200>
