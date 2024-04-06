@@ -16,12 +16,12 @@ ds003.cpp 결과<br>
 
 ds004.cpp 결과<br>
 
-<img src='https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab5/results/ds004.png' height = 100>
+<img src='https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab5/results/ds004.png' height = 150>
 
 ds005.cpp 결과<br>
 
-<img src='https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab5/results/ds005.png' height = 100>
+<img src='https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab5/results/ds005.png' height = 200>
 
 ds006.cpp 결과<br>
 
-<img src='https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab5/results/ds006.png' height = 100>
+<img src='https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab5/results/ds006.png' height = 150>
