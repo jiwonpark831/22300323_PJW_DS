@@ -74,9 +74,10 @@ int main()
     MyStack myStack(size);
     Elem one;
 
-    for (int i = 0; i < size; i++)
+    string ppp;
+    // for (int i = 0; i < size; i++)
+    while (ppp != "print")
     {
-        string ppp;
         cin >> ppp;
         if (ppp == "push")
         {
@@ -89,12 +90,13 @@ int main()
         {
             myStack.pop();
         }
-        else if (ppp == "print")
-        {
-            myStack.print();
-            return 0;
-        }
+        /* else if (ppp == "print")
+           {
+               myStack.print();
+               return 0;
+           }*/
     }
+    myStack.print();
     // Elem *p;
     //  MyStack myStack(5);
 
