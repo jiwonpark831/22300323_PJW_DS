@@ -28,7 +28,6 @@ public:
 
 CouponStack::CouponStack(int size)
 {
-    // cout << size << endl;
     maxsize = size;
     list = new Elem[size];
     initialize();
@@ -60,16 +59,16 @@ void CouponStack::print()
 {
     for (int i = 0; i < top; i++)
     {
+        cout << list[i].num << list[i].name << endl;
     }
-    // cout << list[i].value << endl;
 }
 
 void CouponStack::rprint()
 {
-    for (int i = 0; i < top; i++)
+    for (int i = top; i >= 0; i--)
     {
+        cout << list[i].num << list[i].name << endl;
     }
-    // cout << list[i].value << endl;
 }
 
 Elem *CouponStack::pop()
@@ -83,5 +82,25 @@ int main()
 {
     int size;
     cin >> size;
+
+    CouponStack mystack(size);
+    char m;
+    cin >> m;
+    while (m != 'q')
+    {
+        Elem one;
+        if (m == '+')
+        {
+            cin >> one.num >> one.name;
+            mystack.push(one);
+        }
+        else if (m == '-')
+        {
+            Elem *p = mystack.pop();
+            cout << p->num << p->name << endl;
+        }
+        cin >> m;
+    }
+
     return 0;
 }
