@@ -8,4 +8,4 @@ ds032.cpp 결과<br>
 
 ds033.cpp 결과<br>
 
-<img src= 'https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab8/results/CouponStack.png' height = 300>
+<img src= 'https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab8/results/CouponStack.png' height = 330>
