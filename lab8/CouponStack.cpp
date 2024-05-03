@@ -75,6 +75,7 @@ Elem *CouponStack::pop()
 {
     if (isEmpty())
         return nullptr;
+    cout << list[top].num << list[top].name << endl;
     return &list[--top];
 }
 
@@ -96,8 +97,7 @@ int main()
         }
         else if (m == '-')
         {
-            Elem *p = mystack.pop();
-            cout << p->num << p->name << endl;
+            mystack.pop();
         }
     }
 
