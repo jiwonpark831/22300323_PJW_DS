@@ -99,7 +99,6 @@ int main()
             Elem *p = mystack.pop();
             cout << p->num << p->name << endl;
         }
-        cin >> m;
     }
 
     return 0;
