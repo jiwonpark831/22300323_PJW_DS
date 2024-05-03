@@ -59,15 +59,15 @@ void CouponStack::print()
 {
     for (int i = 0; i < top; i++)
     {
-        cout << list[i].num << list[i].name << endl;
+        cout << list[i].num << " " << list[i].name << endl;
     }
 }
 
 void CouponStack::rprint()
 {
-    for (int i = top; i >= 0; i--)
+    for (int i = top - 1; i >= 0; i--)
     {
-        cout << list[i].num << list[i].name << endl;
+        cout << list[i].num << " " << list[i].name << endl;
     }
 }
 
@@ -75,7 +75,6 @@ Elem *CouponStack::pop()
 {
     if (isEmpty())
         return nullptr;
-    cout << list[top].num << list[top].name << endl;
     return &list[--top];
 }
 
@@ -97,9 +96,12 @@ int main()
         }
         else if (m == '-')
         {
-            mystack.pop();
+            Elem *pop = mystack.pop();
+            cout << pop->num << "등 - " << pop->name << endl;
         }
+        cin >> m;
     }
+    mystack.rprint();
 
     return 0;
 }
