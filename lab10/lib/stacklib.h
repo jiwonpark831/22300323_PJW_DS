@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-// #include "stacklib.h"
 
 class Node
 {
@@ -21,19 +20,7 @@ public:
     void pop();
     int peek() const;
     int getNodeCnt();
-    linkedStack();
-    ~linkedStack();
+    MyLinkedStack();
+    ~MyLinkedStack();
     void printAll();
 };
-
-void MyLinkedStack::initialized()
-{
-}
-
-bool MyLinkedStack::isEmpty() const
-{
-    if (stacktop == NULL)
-        return true;
-    return false;
-}
-
