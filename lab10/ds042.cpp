@@ -14,7 +14,7 @@ int main()
         op = exp.substr(i, 1);
         if (op == "#")
         {
-            stack.push(exp[i + 1])ƒ;
+            stack.push(exp[i + 1]) ƒ;
             i++;
         }
         else if (op == "+")
