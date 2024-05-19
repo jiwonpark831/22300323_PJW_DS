@@ -8,4 +8,4 @@ ds052.cpp 결과<br>
 
 ds053.cpp 결과<br>
 
-<img src= 'https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab11/results/ds053.png' height = 200>
+<img src= 'https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab11/results/ds053.png' height = 100>
