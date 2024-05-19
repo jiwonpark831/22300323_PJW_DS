@@ -4,8 +4,8 @@ ds051.cpp 결과<br>
 
 ds052.cpp 결과<br>
 
-<img src= 'https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab11/results/ds052.png' height = 800>
+<img src= 'https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab11/results/ds052.png' height = 700>
 
 ds053.cpp 결과<br>
 
-<img src= 'https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab8/results/CouponStack.png' height = 330>
+<img src= 'https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab11/results/ds053.png' height = 200>
