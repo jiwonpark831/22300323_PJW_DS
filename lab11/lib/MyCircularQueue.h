@@ -27,4 +27,5 @@ public:
     void print();
     elem Front();
     elem Rear();
+    void print052();
 };

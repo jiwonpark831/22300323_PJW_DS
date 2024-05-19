@@ -98,3 +98,25 @@ void MyCircularQueue::print()
     }
     cout << "\nfront: " << front << ", rear: " << rear << endl;
 }
+void MyCircularQueue::print052()
+{
+    if (!isEmpty())
+    {
+        int i = front;
+        while (i != rear)
+        {
+            cout << list[i] << " ";
+            i = (i + 1) % maxsize;
+        }
+        cout << endl;
+    }
+}
+elem MyCircularQueue::Front()
+{
+    return list[front];
+}
+
+elem MyCircularQueue::Rear()
+{
+    return list[(rear - 1 % maxsize) % maxsize];
+}
