@@ -5,7 +5,6 @@ using namespace std;
 struct Node
 {
         int data;
-
         Node *link;
 };
 
@@ -16,25 +15,27 @@ private:
         Node *rear;
 
 public:
-        LLQueue(){
+        LLQueue()
+        {
                 front = NULL;
                 rear = NULL;
         };
-        ~LLQueue();
+        ~LLQueue()
+        {
+                initialize();
+        };
         void initialize();
         bool isEmpty() const;
         void enqueue(const int &value);
         void dequeue();
         void showFront();
-        int Front();
-        int Rear();
+        void showRear();
         void printAll();
 };
 
 void LLQueue::initialize()
 {
-        Node *ptr = new Node();
-        for (ptr = front; ptr != NULL; ptr = ptr->link)
+        while (!isEmpty())
                 dequeue();
         front = NULL;
         rear = NULL;
@@ -94,7 +95,15 @@ void LLQueue::showFront()
         if (isEmpty())
                 cout << "Queue is empty\n";
         else
-                cout << "element at front is:" << front->data;
+                cout << "element at front is: " << front->data << endl;
+}
+
+void LLQueue::showRear()
+{
+        if (isEmpty())
+                cout << "Queue is empty\n";
+        else
+                cout << "element at rear is: " << rear->data << endl;
 }
 
 // function to display queue
@@ -110,6 +119,7 @@ void LLQueue::printAll()
                         cout << ptr->data << " ";
                         ptr = ptr->link;
                 }
+                cout << endl;
         }
 }
 
@@ -120,12 +130,12 @@ int main()
         int choice, flag = 1, value;
         while (flag == 1)
         {
-                cout << "\n1.enqueue 2.dequeue 3.showfront 4.displayQueue 5.exit\n";
+                cout << "\n1.enqueue 2.dequeue 3.showfront 4.showrear 5.displayQueue 6.exit > ";
                 cin >> choice;
                 switch (choice)
                 {
                 case 1:
-                        cout << "Enter Value:\n";
+                        cout << "Enter Value: ";
                         cin >> value;
                         linkedQueue.enqueue(value);
                         break;
@@ -136,10 +146,14 @@ int main()
                         linkedQueue.showFront();
                         break;
                 case 4:
-                        linkedQueue.printAll();
+                        linkedQueue.showRear();
                         break;
                 case 5:
+                        linkedQueue.printAll();
+                        break;
+                case 6:
                         flag = 0;
+                        cout << "bye!" << endl;
                         break;
                 }
         }

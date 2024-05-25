@@ -2,8 +2,7 @@
 
 void LLQueue::initialize()
 {
-        Node *ptr = new Node();
-        for (ptr = front; ptr != NULL; ptr = ptr->link)
+        while (!isEmpty())
                 dequeue();
         front = NULL;
         rear = NULL;
@@ -63,7 +62,15 @@ void LLQueue::showFront()
         if (isEmpty())
                 cout << "Queue is empty\n";
         else
-                cout << "element at front is:" << front->data;
+                cout << "element at front is: " << front->data << endl;
+}
+
+void LLQueue::showRear()
+{
+        if (isEmpty())
+                cout << "Queue is empty\n";
+        else
+                cout << "element at rear is: " << rear->data << endl;
 }
 
 // function to display queue
@@ -79,5 +86,6 @@ void LLQueue::printAll()
                         cout << ptr->data << " ";
                         ptr = ptr->link;
                 }
+                cout << endl;
         }
 }
