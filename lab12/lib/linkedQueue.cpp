@@ -64,6 +64,21 @@ void LLQueue::showFront()
         else
                 cout << "element at front is: " << front->data << endl;
 }
+int LLQueue::one()
+{
+        return front->data;
+}
+
+int LLQueue::two()
+{
+        if (front->link != NULL)
+                return front->link->data;
+}
+
+int LLQueue::Rear()
+{
+        return rear->data;
+}
 
 void LLQueue::showRear()
 {

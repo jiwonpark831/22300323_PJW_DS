@@ -30,4 +30,7 @@ public:
         void showFront();
         void showRear();
         void printAll();
+        int one();
+        int two();
+        int Rear();
 };
