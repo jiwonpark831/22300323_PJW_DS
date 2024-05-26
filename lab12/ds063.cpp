@@ -112,8 +112,8 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        queue1.enqueue(player1[i] - '0');
-        queue2.enqueue(player2[i] - '0');
+        queue1.enqueue(player1[i]);
+        queue2.enqueue(player2[i]);
     }
 
     for (int i = 0; i < n; i++)
