@@ -27,7 +27,25 @@ void bubble_sort(int *arr, int n)
 #endif
     }
 }
-
+void bubble_sort_des(int *arr, int n)
+{
+    int temp;
+    for (int j = n - 1; j >= 1; j--)
+    {
+        for (int k = 0; k < j; k++)
+        {
+            if (arr[k] < arr[k + 1])
+            {
+                temp = arr[k];
+                arr[k] = arr[k + 1];
+                arr[k + 1] = temp;
+            }
+        }
+#ifdef DEBUGMODE
+        print(arr, n);
+#endif
+    }
+}
 int main()
 {
     int n;
@@ -39,7 +57,11 @@ int main()
     }
     print(arr, n);
     bubble_sort(arr, n);
-    cout << "====" << endl;
+    cout << "==== ascending order ====" << endl;
+    print(arr, n);
+    cout << endl;
+    bubble_sort_des(arr, n);
+    cout << "==== descending order ====" << endl;
     print(arr, n);
     return 0;
 }
