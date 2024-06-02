@@ -1,11 +1,13 @@
 #include <iostream>
 using namespace std;
+
 void print(int *arr, int n)
 {
     for (int i = 0; i < n; i++)
         cout << "[" << arr[i] << "] ";
     cout << endl;
 }
+
 void quick_sort(int *a, int left, int right, int n)
 {
     int pivot, temp;

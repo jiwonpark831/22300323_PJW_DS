@@ -1,11 +1,13 @@
 #include <iostream>
 using namespace std;
+
 void print(int *arr, int n)
 {
     for (int i = 0; i < n; i++)
         cout << "[" << arr[i] << "] ";
     cout << endl;
 }
+
 void merge(int a[], int b[], int n1, int n2, int n3, int n4)
 {
     int i, j, k, t;

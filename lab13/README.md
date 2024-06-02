@@ -20,4 +20,5 @@ ds075.cpp 결과<br>
 
 ds076.cpp 결과<br>
 
-<img src= 'https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab13/results/ds076.png' width =400>
+<img src= 'https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab13/results/ds076-1.png' width =400>
+<img src= 'https://github.com/jiwonpark831/22300323_PJW_DS/blob/main/lab13/results/ds076-2.png' width =400>

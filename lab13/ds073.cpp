@@ -27,6 +27,7 @@ void bubble_sort(int *arr, int n)
 #endif
     }
 }
+
 void bubble_sort_des(int *arr, int n)
 {
     int temp;
