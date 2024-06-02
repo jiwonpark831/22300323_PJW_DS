@@ -1,6 +1,3 @@
-// compile for debugging
-// g++ myselectionsort_debug.cpp -DDEBUGMODE
-
 #include <iostream>
 using namespace std;
 
@@ -10,21 +7,18 @@ void print(int *arr, int n)
         cout << "[" << arr[i] << "] ";
     cout << endl;
 }
-
-void selectionSort(int *arr, int n)
+void insertion_sort(int *arr, int n)
 {
-    int min_i = 0;
-
-    for (int i = 0; i < n - 1; i++)
+    for (int j = 1; j < n; j++)
     {
-        min_i = i;
-        for (int j = i + 1; j < n; j++)
+        int temp = arr[j];
+        int k = j - 1;
+        while ((k >= 0) && (arr[k] > temp))
         {
-            if (arr[min_i] > arr[j])
-                min_i = j;
+            arr[k + 1] = arr[k];
+            k--;
         }
-        if (i != min_i)
-            swap(arr[i], arr[min_i]);
+        arr[k + 1] = temp;
 #ifdef DEBUGMODE
         print(arr, n);
 #endif
@@ -41,7 +35,7 @@ int main()
         cin >> arr[i];
     }
     print(arr, n);
-    selectionSort(arr, n);
+    insertion_sort(arr, n);
     cout << "====" << endl;
     print(arr, n);
     return 0;

@@ -1,6 +1,3 @@
-// compile for debugging
-// g++ myselectionsort_debug.cpp -DDEBUGMODE
-
 #include <iostream>
 using namespace std;
 
@@ -11,20 +8,20 @@ void print(int *arr, int n)
     cout << endl;
 }
 
-void selectionSort(int *arr, int n)
+void bubble_sort(int *arr, int n)
 {
-    int min_i = 0;
-
-    for (int i = 0; i < n - 1; i++)
+    int temp;
+    for (int j = n - 1; j >= 1; j--)
     {
-        min_i = i;
-        for (int j = i + 1; j < n; j++)
+        for (int k = 0; k < j; k++)
         {
-            if (arr[min_i] > arr[j])
-                min_i = j;
+            if (arr[k] > arr[k + 1])
+            {
+                temp = arr[k];
+                arr[k] = arr[k + 1];
+                arr[k + 1] = temp;
+            }
         }
-        if (i != min_i)
-            swap(arr[i], arr[min_i]);
 #ifdef DEBUGMODE
         print(arr, n);
 #endif
@@ -41,7 +38,7 @@ int main()
         cin >> arr[i];
     }
     print(arr, n);
-    selectionSort(arr, n);
+    bubble_sort(arr, n);
     cout << "====" << endl;
     print(arr, n);
     return 0;

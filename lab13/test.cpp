@@ -1,10 +1,11 @@
+// g++ test.cpp -D_DEBUGMODE_
+
 #include <iostream>
 using namespace std;
-#define _DEBUGMODE_
+// #define _DEBUGMODE_
 
 int main()
 {
-
 #ifdef _DEBUGMODE_
     cout << "DEBUGMODE" << endl;
 #endif
