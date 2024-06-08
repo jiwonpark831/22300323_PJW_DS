@@ -11,7 +11,7 @@ public:
     {
         size = 0;
     }
-    void add(int value)
+    void insert(int value)
     {
         size += 1;
         data[size] = value;
@@ -34,7 +34,7 @@ public:
         return;
     }
 
-    int remove()
+    int deletee()
     {
         int x = data[1];
         data[1] = data[size];
@@ -61,7 +61,7 @@ public:
         }
         return x;
     }
-    void print()
+    void printHeap()
     {
         cout << "==> Heap: ";
         for (int i = 1; i <= size; i++)
@@ -85,18 +85,18 @@ int main()
             int value;
             cout << "new value? ";
             cin >> value;
-            h.add(value);
-            h.print();
+            h.insert(value);
+            h.printHeap();
         }
         else if (menu == 2)
         {
-            int x = h.remove();
+            int x = h.deletee();
             cout << "=> Delete " << x << endl;
-            h.print();
+            h.printHeap();
         }
         else if (menu == 3)
         {
-            h.print();
+            h.printHeap();
         }
         else
             break;
