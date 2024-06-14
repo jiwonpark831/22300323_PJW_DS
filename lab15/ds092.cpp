@@ -1,26 +1,26 @@
 #include <iostream>
 using namespace std;
-#include <algorithm>
+#include <queue>
 #include <vector>
 
-int main(){
+int main()
+{
     int num;
     int k;
     cin >> num >> k;
-    vector<int> v;
-    for(int i = 0 ; i < num ; i++){
+    priority_queue<int> pq;
+    for (int i = 0; i < num; i++)
+    {
         int input;
         cin >> input;
-        v.push_back(input);
+        pq.push(input);
     }
 
-
-
-
-
-
-
-
+    for (int j = 0; j < k - 1; j++)
+    {
+        pq.pop();
+    }
+    cout << pq.top() << endl;
 
     return 0;
 }
