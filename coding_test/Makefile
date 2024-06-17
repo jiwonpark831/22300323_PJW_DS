@@ -19,11 +19,11 @@ all : $(EXEALL)
 $(EXE1): $(EXE1).cpp $(LIB)
 	$(CC) -o $@ $^ $(INCLUDEPATH)
 
-$(EXE2): $(EXE2).cpp 
-	$(CC) -o $@ $^ 
+$(EXE2): $(EXE2).cpp $(LIB)
+	$(CC) -o $@ $^ $(INCLUDEPATH)
 	
-$(EXE3): $(EXE3).cpp
-	$(CC) -o $@ $^
+$(EXE3): $(EXE3).cpp $(LIB)
+	$(CC) -o $@ $^ $(INCLUDEPATH)
 
 $(EXE4): $(EXE4).cpp
 	$(CC) -o $@ $^
