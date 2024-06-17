@@ -4,22 +4,22 @@ using namespace std;
 struct node
 {
     int data;
-    struct node *next;
+    node *next;
 };
 
-struct node *start = NULL;
-struct node *last = NULL;
+node *start = NULL;
+node *last = NULL;
 
-void swapNode(struct node *x, struct node *y)
+void swapNode(node *x, node *y)
 {
     int temp = x->data;
     x->data = y->data;
     y->data = temp;
 }
 
-struct node *createNode(int x)
+node *createNode(int x)
 {
-    struct node *newNode = (struct node *)malloc(sizeof(struct node));
+    node *newNode = new node;
     newNode->data = x;
     newNode->next = NULL;
     return newNode;
@@ -27,7 +27,7 @@ struct node *createNode(int x)
 
 void addLast(int y)
 {
-    struct node *newNode = createNode(y);
+    node *newNode = createNode(y);
     if (start == NULL)
     {
         start = newNode;
@@ -42,7 +42,7 @@ void addLast(int y)
 
 void printLinked()
 {
-    struct node *temp = start;
+    node *temp = start;
     while (temp->next != NULL)
     {
         cout << temp->data << " ";
@@ -53,7 +53,7 @@ void printLinked()
 
 void clearLinked()
 {
-    struct node *temp;
+    node *temp;
     while (start != NULL)
     {
         temp = start;
@@ -79,8 +79,8 @@ void init(int size)
 
 void selectionLinked()
 {
-    struct node *key;
-    struct node *temp;
+    node *key;
+    node *temp;
 
     key = start;
     while (key != NULL)
