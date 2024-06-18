@@ -24,19 +24,20 @@ int main()
     int count = 0;
     for (int j = 0; j < k; j++)
     {
-        if (arrA[j] < arrB[k + 1 - j])
+        if (arrA[j] < arrB[n - 1 - j])
         {
             int temp = arrA[j];
-            arrA[j] = arrB[k + 1 - j];
-            arrB[k - j] = temp;
+            arrA[j] = arrB[n - 1 - j];
+            arrB[n - 1 - j] = temp;
             count++;
         }
     }
     int sum = 0;
-    for (int a = 0; a < n; a++)
-    {
-        cout << arrA[a] << " ";
-    }
+    // for (int a = 0; a < n; a++)
+    // {
+    //     cout << arrA[a] << " ";
+    // }
+    // cout << endl;
     for (int a = 0; a < n; a++)
     {
         sum += arrA[a];
