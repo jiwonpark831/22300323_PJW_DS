@@ -18,23 +18,18 @@ public:
     {
         length += 1;
         arr[length] = value;
-        int i = length;
-        int parent = i / 2;
+        int index = length;
 
-        while (parent > 0)
+        int parent = index / 2;
+
+        while (parent > 0 && arr[parent] > arr[index])
         {
-            if (arr[parent] < arr[i])
-            {
-                int temp = arr[parent];
-                arr[parent] = arr[i];
-                arr[i] = temp;
-                i = parent;
-                parent = i / 2;
-            }
-            else
-                break;
+            int temp = arr[parent];
+            arr[parent] = arr[index];
+            arr[index] = temp;
+            index = parent;
+            parent = index / 2;
         }
-        return;
     }
 
     int deleteKey()
@@ -47,11 +42,11 @@ public:
         int child = 2;
         while (child <= length)
         {
-            if (child + 1 <= length && arr[child] < arr[child + 1])
+            if (child + 1 <= length && arr[child] > arr[child + 1])
             {
                 child += 1;
             }
-            if (arr[i] < arr[child])
+            if (arr[i] > arr[child])
             {
                 int temp = arr[child];
                 arr[child] = arr[i];
@@ -66,8 +61,7 @@ public:
     }
     int peek()
     {
-        int min;
-        return min;
+        return arr[1];
     }
     int size()
     {
@@ -75,10 +69,20 @@ public:
     }
     bool isEmpty()
     {
-        return isEmpty;
+        return length == 0;
     }
     void minHeapifyUp(int index)
     {
+        int parent = index / 2;
+
+        while (parent > 0 && arr[parent] > arr[index])
+        {
+            int temp = arr[parent];
+            arr[parent] = arr[index];
+            arr[index] = temp;
+            index = parent;
+            parent = index / 2;
+        }
     }
     void minHeapifyDown(int root = 0)
     {
@@ -109,13 +113,12 @@ int main()
         {
             int n;
             cin >> n;
-            int arr[n];
             for (int i = 0; i < n; i++)
             {
-                cin >> arr[i];
-                h.insertKey(arr[i]);
+                int value;
+                cin >> value;
+                h.insertKey(value);
             }
-            h.minHeapifyUp();
             h.printHeap();
         }
         else if (menu == 2)
@@ -123,13 +126,12 @@ int main()
             int value;
             cin >> value;
             h.insertKey(value);
-            h.minHeapifyUp();
             h.printHeap();
         }
         else if (menu == 3)
         {
             int x = h.deleteKey();
-            cout << "=> Delete " << x << endl;
+            cout << "=> min value : " << x << endl;
             h.printHeap();
         }
         else if (menu == 4)
