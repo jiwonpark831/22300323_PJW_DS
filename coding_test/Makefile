@@ -34,8 +34,8 @@ $(EXE5): $(EXE5).cpp
 $(EXE6): $(EXE6).cpp
 	$(CC) -o $@ $^
 
-$(EXE7): $(EXE7).cpp
-	$(CC) -o $@ $^
+$(EXE7): $(EXE7).cpp $(LIB)
+	$(CC) -o $@ $^ $(INCLUDEPATH)
 
 $(EXE8): $(EXE8).cpp
 	$(CC) -o $@ $^
